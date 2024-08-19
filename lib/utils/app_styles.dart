@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 
 abstract class AppStyles {
@@ -102,7 +101,7 @@ double getResponsiveSize(BuildContext context, {required double fontSize}) {
   double lowerLimit = fontSize * .8;
   double upperLimit = fontSize * 1.2;
   responsiveSize.clamp(lowerLimit, upperLimit);
-  log(responsiveSize.toString());
+  //log(responsiveSize.toString());
   return responsiveSize;
 }
 
