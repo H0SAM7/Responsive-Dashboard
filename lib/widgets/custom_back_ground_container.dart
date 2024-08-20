@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class CustomBackGroundContainer extends StatelessWidget {
@@ -12,12 +11,13 @@ class CustomBackGroundContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding:  EdgeInsets.all(padding??20),
+      padding: EdgeInsets.all(padding ?? 20),
       decoration: ShapeDecoration(
-          color: Colors.white,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
-          )),
+        color: Colors.white,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+        ),
+      ),
       child: child,
     );
   }
