@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/widgets/drawer.dart';
 import 'package:responsive_dashboard/widgets/my_card_section.dart';
 import 'package:responsive_dashboard/widgets/section_2_layout.dart';
+import 'package:responsive_dashboard/widgets/section_3_layout.dart';
 
 class DashboardDesktopLayoutView extends StatelessWidget {
   const DashboardDesktopLayoutView({super.key});
@@ -25,7 +26,7 @@ class DashboardDesktopLayoutView extends StatelessWidget {
           SizedBox(
             width: 24,
           ),
-          Expanded(child: MyCardSection(),),
+          Expanded(child: Section3Layot(),),
 
         ],
       ),
