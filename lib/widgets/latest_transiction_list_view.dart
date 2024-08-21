@@ -12,11 +12,11 @@ class LatestTransactionListView extends StatelessWidget {
         title: 'Madrani Andi',
         subtitle: 'Madraniadi20@gmail.com'),
     DrawerItemModel(
-        image: Assets.imagesAvatar1,
+        image: Assets.imagesAvatar2,
         title: 'Josua Nunito',
         subtitle: 'Josh Nunito@gmail.com'),
     DrawerItemModel(
-        image: Assets.imagesAvatar1,
+        image: Assets.imagesAvatar3,
         title: 'Madraniadi',
         subtitle: 'Josh Nunito@gmail.com'),
     DrawerItemModel(
