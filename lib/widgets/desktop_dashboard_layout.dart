@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/widgets/drawer.dart';
-import 'package:responsive_dashboard/widgets/my_card_section.dart';
 import 'package:responsive_dashboard/widgets/section_2_layout.dart';
 import 'package:responsive_dashboard/widgets/section_3_layout.dart';
 
