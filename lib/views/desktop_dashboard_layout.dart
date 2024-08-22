@@ -10,6 +10,7 @@ class DashboardDesktopLayoutView extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Row(
+
         children: [
           Expanded(
             flex: 1,
@@ -19,26 +20,29 @@ class DashboardDesktopLayoutView extends StatelessWidget {
             width: 32,
           ),
           Expanded(
-            flex: 2,
-            child: Section2Layot(),
-          ),
-          SizedBox(
-            width: 24,
-          ),
-          Expanded(child: Section3Layot(),),
-
+            flex: 3,
+            child: CustomScrollView(slivers: [
+              SliverFillRemaining(
+                hasScrollBody: false,
+                child: Row(
+                  children: [
+                    Expanded(
+                      flex: 2,
+                      child: Section2Layot(),
+                    ),
+                    SizedBox(
+                      width: 24,
+                    ),
+                    Expanded(
+                      child: Section3Layot(),
+                    ),
+                  ],
+                ),
+              ),
+            ]),
+          )
         ],
       ),
     );
   }
 }
-
-
-
-
-
-
-
-
-
-

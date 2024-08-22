@@ -19,13 +19,19 @@ class IncomeDetails extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: items.length,
-      shrinkWrap: true,
-      itemBuilder: (context, ind) {
-        return ItemDetails(itemDetailsModel: items[ind]);
-      },
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: items.map((e) => ItemDetails(itemDetailsModel: e)).toList(),
+
     );
+    
+    // return ListView.builder(
+    //   itemCount: items.length,
+    //   shrinkWrap: true,
+    //   itemBuilder: (context, ind) {
+    //     return ItemDetails(itemDetailsModel: items[ind]);
+    //   },
+    // );
   }
 }
 
@@ -48,13 +54,19 @@ class ItemDetails extends StatelessWidget {
           shape: const OvalBorder(),
         ),
       ),
-      title: Text(
-        itemDetailsModel.title,
-        style: AppStyles.styleRegular16(context),
+      title: FittedBox(
+        fit: BoxFit.scaleDown,
+        child: Text(
+          itemDetailsModel.title,
+          style: AppStyles.styleRegular16(context),
+        ),
       ),
-      trailing: Text(
-        itemDetailsModel.percent,
-        style: AppStyles.styleMedium16(context),
+      trailing: FittedBox(
+          fit: BoxFit.scaleDown,
+        child: Text(
+          itemDetailsModel.percent,
+          style: AppStyles.styleMedium16(context),
+        ),
       ),
     );
   }

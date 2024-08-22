@@ -97,6 +97,7 @@ abstract class AppStyles {
 // (min , max) fontsize
 
 double getResponsiveSize(BuildContext context, {required double fontSize}) {
+
   double responsiveSize = fontSize * getScaleFactor(context);
   double lowerLimit = fontSize * .8;
   double upperLimit = fontSize * 1.2;
@@ -106,12 +107,18 @@ double getResponsiveSize(BuildContext context, {required double fontSize}) {
 }
 
 double getScaleFactor(BuildContext context) {
+  //   var disPacher=PlatformDispatcher.instance;
+  // var physicalWidth=disPacher.views.first.physicalSize.width;
+  // var devicePixelRatio=disPacher.views.first.devicePixelRatio;  
+  // double width=physicalWidth/devicePixelRatio;   ------> contextبديل الميديا كويري في حال انك مش عايز تستخدم ال 
+
   double width = MediaQuery.sizeOf(context).width;
-  if (width < 600) {
-    return width / 400;
-  } else if (width < 900) {
-    return width / 700;
+  if (width < 850) {
+    return width / 600;
+  } else if (width < 1200) {
+    return width / 950;
   } else {
-    return width / 1000;
+    return width / 1600;
   }
 }
+

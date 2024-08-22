@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/widgets/all_expenses.dart';
 import 'package:responsive_dashboard/widgets/drawer.dart';
-import 'package:responsive_dashboard/widgets/income.dart';
+import 'package:responsive_dashboard/widgets/income_mobile_layout.dart';
 import 'package:responsive_dashboard/widgets/my_card_section.dart';
 import 'package:responsive_dashboard/widgets/quick_invoice.dart';
 import 'package:responsive_dashboard/widgets/transction_history.dart';
@@ -19,11 +19,12 @@ class _MobileLayoutViewState extends State<MobileLayoutView> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldkey,
-      appBar: MediaQuery.sizeOf(context).width < 800
+      appBar: MediaQuery.sizeOf(context).width < 850
           ? AppBar(
               elevation: 0,
+              backgroundColor: const Color(0xFF4EB7F2),
               leading: IconButton(
-                icon: const Icon(Icons.menu, color: Color(0xFF4EB7F2)),
+                icon: const Icon(Icons.menu, color: Color.fromARGB(255, 255, 255, 255)),
                 onPressed: () {
                  scaffoldkey.currentState!.openDrawer();
                 },
@@ -38,9 +39,15 @@ class _MobileLayoutViewState extends State<MobileLayoutView> {
               height: 24,
             ),
             QuickInvoice(),
-            MyCardSection(),
-            TransctionHistory(),
-            Income(),
+            Padding(
+              padding: EdgeInsets.all(8.0),
+              child: MyCardSection(),
+            ),
+            Padding(
+              padding: EdgeInsets.all(8.0),
+              child: TransctionHistory(),
+            ),
+            IncomeMobileLayout(),
           ],
         ),
       ),
@@ -49,3 +56,5 @@ class _MobileLayoutViewState extends State<MobileLayoutView> {
     );
   }
 }
+
+

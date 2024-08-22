@@ -4,8 +4,6 @@ import 'package:responsive_dashboard/widgets/drawer.dart';
 import 'package:responsive_dashboard/widgets/income.dart';
 import 'package:responsive_dashboard/widgets/my_card_section.dart';
 import 'package:responsive_dashboard/widgets/quick_invoice.dart';
-import 'package:responsive_dashboard/widgets/section_2_layout.dart';
-import 'package:responsive_dashboard/widgets/section_3_layout.dart';
 import 'package:responsive_dashboard/widgets/transction_history.dart';
 
 class TabletLayoutView extends StatelessWidget {
@@ -26,20 +24,23 @@ class TabletLayoutView extends StatelessWidget {
           Expanded(
             flex: 3,
             child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  SizedBox(
-                    height: 40,
-                  ),
-                  AllExpenses(),
-                  SizedBox(
-                    height: 24,
-                  ),
-                  QuickInvoice(),
-                  MyCardSection(),
-                  TransctionHistory(),
-                  Income(),
-                ],
+              child: Padding(
+                padding: EdgeInsets.only(right: 16.0),
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: 40,
+                    ),
+                    AllExpenses(),
+                    SizedBox(
+                      height: 24,
+                    ),
+                    QuickInvoice(),
+                    MyCardSection(),
+                    TransctionHistory(),
+                    Income(),
+                  ],
+                ),
               ),
             ),
           ),

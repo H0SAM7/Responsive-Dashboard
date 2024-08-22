@@ -32,30 +32,46 @@ class AllExpensesItemsListView extends StatefulWidget {
 }
 
 class _AllExpensesItemsListViewState extends State<AllExpensesItemsListView> {
-  int selectedInd=0;
+  int selectedInd = 0;
   @override
   Widget build(BuildContext context) {
+    // return Row(
+    //   children: [
+    //     Expanded(
+    //         child: Padding(
+    //       padding: EdgeInsets.symmetric(horizontal: e.key == 1 ? 12.0 : 0),
+    //       child: GestureDetector(
+    //         onTap: () {
+    //           setState(() {
+    //             selectedInd = e.key;
+    //           });
+    //         },
+    //         child: AllExpensesItem(
+    //           allExpensesModel: AllExpensesItemsListView.items[0],
+    //           isSelected: selectedInd == 0,
+    //         ),
+    //       ),
+    //     ))
+    //   ],
+    // );
+
     return Row(
       //   children: items.map((e) => Expanded(child: AllExpensesItem(allExpensesModel: e))).toList(),
       children: AllExpensesItemsListView.items
           .asMap()
           .entries
           .map((e) => Expanded(
-              child: Padding(
-            padding:
-                EdgeInsets.symmetric(horizontal: e.key == 1 ? 12.0 : 0),
-            child: GestureDetector(
-              onTap: (){
-                setState(() {
-                 selectedInd=e.key;
-                });
-              },
-              child: AllExpensesItem(
-                allExpensesModel: e.value,
-                isSelected: selectedInd==e.key,
-              ),
-            ),
-          )))
+                  child: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        selectedInd = e.key;
+                      });
+                    },
+                    child: AllExpensesItem(
+                      allExpensesModel: e.value,
+                      isSelected: selectedInd == e.key,
+                    ),
+                  )))
           .toList(),
     );
   }

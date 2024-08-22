@@ -12,7 +12,10 @@ class TransctionHistory extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const TransctionHeader(),
+        const Padding(
+          padding: EdgeInsets.only(top: 8.0),
+          child: TransctionHeader(),
+        ),
         const SizedBox(
           height: 20,
         ),
@@ -47,11 +50,15 @@ class TransctionHistoryListView extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-        itemCount: items.length,
-        shrinkWrap: true,
-        itemBuilder: (context, ind) {
-          return TransactionItem(transctionModel: items[ind]);
-        });
+    return Column(
+      children: items.map((e) => TransactionItem(transctionModel: e)).toList(),
+
+    );
+    // return ListView.builder(
+    //     itemCount: items.length,
+    //     //shrinkWrap: true,
+    //     itemBuilder: (context, ind) {
+    //       return TransactionItem(transctionModel: items[ind]);
+    //     });
   }
 }

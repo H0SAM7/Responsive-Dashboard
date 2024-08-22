@@ -35,17 +35,26 @@ class InActiveAllExpensesItems extends StatelessWidget {
           const SizedBox(
             height: 34,
           ),
-          Text(
-            allExpensesModel.title,
-            style: AppStyles.styleMedium16(context),
+          FittedBox(
+             fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesModel.title,
+              style: AppStyles.styleMedium16(context),
+            ),
           ),
-          Text(
-            allExpensesModel.date,
-            style: AppStyles.styleRegular14(context),
+          FittedBox(
+             fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesModel.date,
+              style: AppStyles.styleRegular14(context),
+            ),
           ),
-          Text(
-            allExpensesModel.price,
-            style: AppStyles.styleSemiBold24(context),
+          FittedBox(
+             fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesModel.price,
+              style: AppStyles.styleSemiBold24(context),
+            ),
           ),
         ],
       ),
@@ -85,20 +94,29 @@ class ActiveAllExpensesItems extends StatelessWidget {
           const SizedBox(
             height: 34,
           ),
-          Text(
-            allExpensesModel.title,
-            style:
-                AppStyles.styleMedium16(context).copyWith(color: Colors.white),
+          FittedBox(
+             fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesModel.title,
+              style:
+                  AppStyles.styleMedium16(context).copyWith(color: Colors.white),
+            ),
           ),
-          Text(
-            allExpensesModel.date,
-            style: AppStyles.styleRegular14(context)
-                .copyWith(color: Colors.white.withOpacity(.5)),
+          FittedBox(
+             fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesModel.date,
+              style: AppStyles.styleRegular14(context)
+                  .copyWith(color: Colors.white.withOpacity(.5)),
+            ),
           ),
-          Text(
-            allExpensesModel.price,
-            style: AppStyles.styleSemiBold24(context)
-                .copyWith(color: Colors.white),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesModel.price,
+              style: AppStyles.styleSemiBold24(context)
+                  .copyWith(color: Colors.white),
+            ),
           ),
         ],
       ),

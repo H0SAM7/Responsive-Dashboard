@@ -9,10 +9,15 @@ class Section3Layot extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(children: [
-      MyCardSection(),
-      TransctionHistory(),
-      Expanded(child: Income()),
-    ],);
+    return const Padding(
+      padding: EdgeInsets.all(8.0),
+      child: Column(
+        children: [
+          MyCardSection(),
+          TransctionHistory(),
+          Expanded(child: Income()),
+        ],
+      ),
+    );
   }
 }
